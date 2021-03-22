@@ -15,8 +15,11 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
+jar {
+    archiveBaseName = 'java-challenge'
+}
 
 repositories {
   mavenCentral()
@@ -24,6 +27,7 @@ repositories {
 
 dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
+  compile("org.springframework.boot:spring-boot-starter-actuator")
   compileOnly("org.projectlombok:lombok")
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
